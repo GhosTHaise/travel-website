@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
+import Button from '../Button'
 
 const Hero = () => {
   return (
@@ -33,6 +34,52 @@ const Hero = () => {
           of seeing the incorruptible beauty of nature.
           We can help you on an adventure around the world in just one app.
         </p>
+        <div
+          className='my-11 flex flex-wrap gap-5'
+        >
+            <div
+              className='flex items-center gap-2'
+            >
+              {
+                Array(5).fill(1).map((_,index) => (
+                  <Image
+                    key={`star-${index}`}
+                    src="/star.svg"
+                    alt='star'
+                    width={24}
+                    height={24}
+                  />
+                ))
+              }
+            </div>
+            
+            <p
+              className='bold-16 lg:bold-20 text-blue-70'
+            >
+              198k
+              <span
+                className='regular-16 lg:regular-20 ml-1 underline'
+              >
+                 Excellent Reviews
+              </span>
+            </p>
+        </div> 
+        <div
+              className='flex flex-col md:flex-row w-full gap-3 sm:flex-row'
+            >
+                <Button
+                  title='Download App'
+                  variant='btn_green'
+                  type='button'
+                />
+
+                <Button
+                  title='How we work?'
+                  icon="/play.svg"
+                  variant='btn_white_text'
+                  type='button'
+                />
+            </div>
       </div>
     </section>
   )
