@@ -6,8 +6,7 @@ const Hero = () => {
   return (
     <section
       className=' max-container padding-container flex flex-col gap-20 py-10 pb-32
-      md:gap-28 lg-py-20 lg:flex-row 
-      border-2 border-red-500'
+      md:gap-28 lg:py-20 lg:flex-row '
     >
       <div className='hero-map' />
 
@@ -82,7 +81,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className='relative flex flex-1 items-start border-2 border-blue-500 '
+      <div className='relative flex flex-1 items-start '
       >
         <div className='relative flex z-20 w-[268px] flex-col gap-8 rounded-3xl bg-green-90 px-7 py-8'
         >
@@ -121,7 +120,7 @@ const Hero = () => {
                 Elevation
               </p>
               <p className='bold-20 text-white' >
-                2.040 Km
+                2.040 km
               </p>
             </div>
           </div>
