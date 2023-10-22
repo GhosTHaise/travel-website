@@ -37,49 +37,95 @@ const Hero = () => {
         <div
           className='my-11 flex flex-wrap gap-5'
         >
-            <div
-              className='flex items-center gap-2'
-            >
-              {
-                Array(5).fill(1).map((_,index) => (
-                  <Image
-                    key={`star-${index}`}
-                    src="/star.svg"
-                    alt='star'
-                    width={24}
-                    height={24}
-                  />
-                ))
-              }
-            </div>
-            
-            <p
-              className='bold-16 lg:bold-20 text-blue-70'
-            >
-              198k
-              <span
-                className='regular-16 lg:regular-20 ml-1 underline'
-              >
-                 Excellent Reviews
-              </span>
-            </p>
-        </div> 
-        <div
-              className='flex flex-col md:flex-row w-full gap-3 sm:flex-row'
-            >
-                <Button
-                  title='Download App'
-                  variant='btn_green'
-                  type='button'
+          <div
+            className='flex items-center gap-2'
+          >
+            {
+              Array(5).fill(1).map((_, index) => (
+                <Image
+                  key={`star-${index}`}
+                  src="/star.svg"
+                  alt='star'
+                  width={24}
+                  height={24}
                 />
+              ))
+            }
+          </div>
 
-                <Button
-                  title='How we work?'
-                  icon="/play.svg"
-                  variant='btn_white_text'
-                  type='button'
-                />
+          <p
+            className='bold-16 lg:bold-20 text-blue-70'
+          >
+            198k
+            <span
+              className='regular-16 lg:regular-20 ml-1 underline'
+            >
+              Excellent Reviews
+            </span>
+          </p>
+        </div>
+        <div
+          className='flex flex-col md:flex-row w-full gap-3 sm:flex-row'
+        >
+          <Button
+            title='Download App'
+            variant='btn_green'
+            type='button'
+          />
+
+          <Button
+            title='How we work?'
+            icon="/play.svg"
+            variant='btn_white_text'
+            type='button'
+          />
+        </div>
+      </div>
+
+      <div className='relative flex flex-1 items-start border-2 border-blue-500 '
+      >
+        <div className='relative flex z-20 w-[268px] flex-col gap-8 rounded-3xl bg-green-90 px-7 py-8'
+        >
+          <div className='flex flex-col'>
+            <div className='flexBetween'>
+              <p className='regular-16 text-gray-20'
+              >
+                Location
+              </p>
+
+              <Image
+                src="/close.svg"
+                alt='close'
+                width={24}
+                height={24}
+              />
             </div>
+            <p className='bold-20 text-white'>
+              Aguas Calientes
+            </p>
+          </div>
+
+
+          <div className='flexBetween'>
+            <div className='flex flex-col'>
+              <p className='regular-16 block text-gray-20'>
+                Distance
+              </p>
+              <p className='bold-20 text-white' >
+                173.28 mi
+              </p>
+            </div>
+
+            <div className='flex flex-col'>
+              <p className='regular-16 block text-gray-20'>
+                Elevation
+              </p>
+              <p className='bold-20 text-white' >
+                2.040 Km
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   )
