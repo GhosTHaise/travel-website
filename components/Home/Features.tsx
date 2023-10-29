@@ -9,7 +9,7 @@ const Features = () => {
       bg-feature-bg bg-center bg-no-repeat py-24
     '>
       <div
-        className='max-container padding-container relative w-full justify-end'
+        className='flex max-container padding-container relative w-full justify-end'
       >
           <div
            className='flex flex-1  lg:min-h-[900px]'
@@ -39,10 +39,11 @@ const Features = () => {
                   Our Features
                 </h2>
               </div>
-              <ul>
+              <ul className='mt-10 grid gap-10 md:grid-cols-2 lg:mt-20 lg:gap-20'>
                 {
                   FEATURES.map((feature) => (
                      <FeatureItem
+                        key={feature.title}
                         {...feature}
                      />
                   ))
