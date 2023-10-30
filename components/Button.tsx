@@ -4,18 +4,20 @@ type Props = {
     type : "button" | "submit";
     title : string;
     icon? : string;
-    variant? : "btn_dark_green" | "btn_green" | "btn_white_text";
+    variant? : "btn_dark_green" | "btn_green" | "btn_white_text" | "btn_white" | "btn_dark_green_outline";
+    full? : boolean; 
 }
 const Button = ({
     type,
     title,
     icon,
-    variant
+    variant,
+    full
 } : Props) => {
   return (
     <button
         type={type}
-        className={`flexCenter gap-3 rounded-full border ${variant}`}
+        className={`flexCenter gap-3 rounded-full border ${variant} ${full && "w-full"} `}
     >
         {
             icon 
@@ -27,7 +29,7 @@ const Button = ({
                 height={24}
             />
         }
-        <label className="bold-16 whitespace-nowrap">
+        <label className="bold-16 whitespace-nowrap cursor-pointer">
             { title }
         </label>
     </button>
