@@ -9,8 +9,9 @@ const FooterColumn = ({
     children
 } : Props) => {
   return (
-    <div>
-        <h4>{title}</h4>
+    <div className='flex flex-col gap-5'>
+        <h4 className='bold-18 whitespace-nowrap'>{title}</h4>
+        {children}
     </div>
   )
 }
